@@ -6,15 +6,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React, { useState} from 'react';
 import {TextInput} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import * as wpActions from '../redux/actions';
 import Toast from 'react-native-simple-toast';
 
 export default function Profile(props: any) {
-    const data = useSelector((state: any) => state.appData);
+
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
